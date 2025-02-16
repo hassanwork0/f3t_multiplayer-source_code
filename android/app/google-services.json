@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "185609375617",
+    "project_id": "threet-multiplayer",
+    "storage_bucket": "threet-multiplayer.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:185609375617:android:82a6676a37195fcebee280",
+        "android_client_info": {
+          "package_name": "com.example.xo_bloc"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAls2QeKicdhyNsZmUiOO80nSSnAEFDHjs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
