@@ -65,6 +65,7 @@ class HomeScreen extends StatelessWidget {
         style: TextStyle(color: Colors.black, fontSize: 16.0),
         cursorColor: Colors.blue,
         controller: controller,
+        onSubmitted: (value) => start(context, controller),
       ),
     );
   }
@@ -77,12 +78,31 @@ class HomeScreen extends StatelessWidget {
           borderRadius: BorderRadius.all(Radius.circular(10)),
         ),
         child: InkWell(
+          onTap:(){
+            start(context ,controller);
+          },
           child: Container(
             margin: const EdgeInsets.fromLTRB(32, 0, 32, 0),
             child: Text("Start",
                 style: TextStyle(fontSize: 35, color: AppColor.white)),
           ),
-          onTap: () async {
+        ));
+  }
+
+  String welcomeText() {
+    return "Welcome to \n XO Multiplayer";
+  }
+
+  Text currentAvailID() {
+    return Text(
+      "Current Avail ID is : ${GameStats.currentAvailID}",
+      style: TextStyle(
+          fontSize: 30, fontWeight: FontWeight.bold, color: AppColor.white),
+      textAlign: TextAlign.center,
+    );
+  }
+  
+  start (BuildContext context, TextEditingController controller) async {
             try {
               int gameCode = int.parse(controller.text);
               GameStats.gameCode = gameCode;
@@ -149,20 +169,7 @@ class HomeScreen extends StatelessWidget {
             } catch (e) {
               controller.text = e.toString();
             }
-          },
-        ));
-  }
-
-  String welcomeText() {
-    return "Welcome to \n XO Multiplayer";
-  }
-
-  Text currentAvailID() {
-    return Text(
-      "Current Avail ID is : ${GameStats.currentAvailID}",
-      style: TextStyle(
-          fontSize: 30, fontWeight: FontWeight.bold, color: AppColor.white),
-      textAlign: TextAlign.center,
-    );
-  }
+          
+     
+    }
 }

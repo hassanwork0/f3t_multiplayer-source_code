@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
       create: (context) => BoardBloc(),
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'Multiplayer Demo',
+        title: 'Multiplayer Demo pre-alpha v1.1',
         theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
